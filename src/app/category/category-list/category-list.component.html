@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<div>
+    <span id="pageTitle">TIDC Pricing Categories</span>  |
+    <a routerLink="/category/create"></a> |
+    <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
+</div>
+<div>
+<main>
+<table class="table table-striped table-sm">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Description</td>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of categories">
+            <td>{{ c.id }}</td>
+            <td>{{ c.description }}</td>
+              <td>
+                <a routerLink="/category/detail/{{ c.id }}" class="clickable">Detail</a>
+                <span> |
+                    <a routerLink="/category/edit/{{ c.id }}" class="clickable">Edit</a>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</main>
+</div>
+<footer></footer>
+

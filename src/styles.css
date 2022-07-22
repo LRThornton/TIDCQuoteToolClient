@@ -1,0 +1,8 @@
+input {
+    border-radius: 7px;
+}
+#pageTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+}
