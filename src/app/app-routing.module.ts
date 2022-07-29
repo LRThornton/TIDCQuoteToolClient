@@ -9,6 +9,8 @@ import { ItemCreateComponent } from './item/item-create/item-create.component';
 import { ItemDetailComponent } from './item/item-detail/item-detail.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
 import { ItemListComponent } from './item/item-list/item-list.component';
+import { CreateQuoteComponent } from './quote/create-quote/create-quote.component';
+
 
 
 const routes: Routes = [
@@ -25,6 +27,10 @@ const routes: Routes = [
     { path: "item/create", component: ItemCreateComponent},
     { path: "item/detail/:id", component: ItemDetailComponent},
     { path: "item/edit/:id", component: ItemEditComponent},
+
+    { path: "quote/create", component: CreateQuoteComponent}
+    
+
     
      ];
   

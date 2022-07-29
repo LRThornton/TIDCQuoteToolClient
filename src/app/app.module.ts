@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,7 @@ import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './core/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemSearchPipe } from './item/item-search.pipe';
+import { CreateQuoteComponent } from './quote/create-quote/create-quote.component';
 
 
 @NgModule({
@@ -31,11 +32,13 @@ import { ItemSearchPipe } from './item/item-search.pipe';
     ItemListComponent,
     MenuComponent,
     HomeComponent,
-    ItemSearchPipe
+    ItemSearchPipe,
+    CreateQuoteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],

@@ -1,8 +1,11 @@
-input {
+input {    
     border-radius: 7px;
 }
 #pageTitle {
     font-size: 1.2em;
     font-weight: bold;
     font-style: italic;
+}
+.body {
+    margin: 25px, 25px, 25px, 25px;
 }

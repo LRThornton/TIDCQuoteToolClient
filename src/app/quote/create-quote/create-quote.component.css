@@ -1,0 +1,38 @@
+.body {
+    margin: 25px;
+}
+
+.top {
+    font-weight: bold;
+}
+
+thead {
+    color: blue;
+
+}
+.right {
+    float: right; 
+    margin-right: 10px;
+    
+}
+.notes {
+    color: red;
+
+}
+div #top { 
+    font-size: medium;
+
+}
+.headings{
+    color: blue;
+}
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  input {
+    border-style: hidden;
+    border-radius: 7px;
+}
