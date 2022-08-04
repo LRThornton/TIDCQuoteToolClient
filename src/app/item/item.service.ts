@@ -8,6 +8,7 @@ import { Item } from './item.class';
 })
 export class ItemService {
 
+  //baseUrl: string = "http://172.20.131.5";
   baseUrl: string = "http://localhost:44393/api/items";
 
   constructor(
