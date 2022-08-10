@@ -1,6 +1,7 @@
 .body {
     margin: 25px;
-}
+} 
+
 
 .top {
     font-weight: bold;
@@ -13,7 +14,7 @@ thead {
 .right {
     float: right; 
     margin-right: 10px;
-    
+
 }
 .notes {
     color: red;

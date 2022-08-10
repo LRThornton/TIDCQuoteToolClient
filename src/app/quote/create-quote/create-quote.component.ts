@@ -21,8 +21,12 @@ export class CreateQuoteComponent implements OnInit {
 
   sortColumn: string ="shortDescription";
   sortOrderAsc: boolean=true;
-  selectionArrayProperty: string[];
+ // selectionArrayProperty: string[];
+
   
+ // showMessage(message: string): void {
+   // alert(message)
+  //}
   
 
   constructor(

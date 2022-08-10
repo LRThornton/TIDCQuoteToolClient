@@ -9,9 +9,14 @@ import { ItemService } from '../item.service';
   templateUrl: './item-list.component.html',
   styleUrls: ['./item-list.component.css']
 })
+
 export class ItemListComponent implements OnInit {
 
+  
+  
 
+  
+ 
   items!: Item[];
 
   sortColumn: string ="shortDescription";
@@ -39,6 +44,10 @@ export class ItemListComponent implements OnInit {
       },
       error: (err) => console.error(err)
     });
-  }
+
+
+    
+
+}
 
 }
