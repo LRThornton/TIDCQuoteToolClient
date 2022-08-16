@@ -15,19 +15,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class CreateQuoteComponent implements OnInit {
 
+  path: string = './src/assets/images/connection.png';
+  alttext: string="connection logo"
+
   searchCriteria: string = "";
   items!: Item[];
   item: Item = new Item();
 
   sortColumn: string ="shortDescription";
   sortOrderAsc: boolean=true;
- // selectionArrayProperty: string[];
 
-  
- // showMessage(message: string): void {
-   // alert(message)
-  //}
-  
 
   constructor(
      private itesvc: ItemService

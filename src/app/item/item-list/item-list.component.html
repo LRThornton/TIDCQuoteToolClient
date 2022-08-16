@@ -4,9 +4,8 @@
     <a routerLink="/item/create">Create New Product/Service</a> |
     <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 </div>
-<div>
-<main>
-<table class="table table-striped table-sm">
+
+<table class="table table-striped table-sm" >
     <thead>
         <tr>
             <td></td>
@@ -24,8 +23,10 @@
     </thead>
     <tbody>
         <tr *ngFor="let i of items | itemSearch:searchCriteria">
-           <td><input type="checkbox" id ="tblSelected" method=""></td> 
-                    <!--<td>{{ i.id }}</td>-->
+            
+           <td><input type="checkbox" [(ngModel)]="i.checked"  (change)="termsChange($event)" value ={{i.id}}></td> 
+           <!--<td><input type="checkbox" id ="checked" value="checked"></td>--> 
+              <!--<td>{{ i.id }}</td>-->
             <td>{{ i.category.description }}</td>
             <td>{{ i.sku }}</td>
             <td>{{ i.partNumber }}</td>
@@ -35,16 +36,13 @@
             <td>{{ i.sell | currency }}</td>
             <td>{{ i.unit}}</td>
             <td>
-                <a routerLink="/item/detail/{{ i.id }}" class="clickable">Detail</a>
-                <span> |
-                    <a routerLink="/item/edit/{{ i.id }}" class="clickable">Edit</a>
-                </span>
+                <a routerLink="/item/detail/{{ i.id }}" class="clickable">Detail</a>  |
+                <a routerLink="/item/edit/{{ i.id }}" class="clickable">Edit</a>            
             </td>
         </tr>
         <br>
-        <button class="btn btn-primary" type="submit" a routerLink="/quote/create/">Create Quote</button>
+        <button class="btn btn-primary" input type="submit" id="checked"  a routerLink="/quote/create/">Create Quote</button>
     </tbody>
 </table>
-</main>
-</div>
+
 <footer></footer>

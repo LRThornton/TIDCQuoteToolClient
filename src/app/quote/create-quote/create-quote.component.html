@@ -6,13 +6,16 @@
     <p style="color: red">Quote is valid for 90 days
     </p>
 </div>
-<div>
-<h1>Connection Logo</h1>
+<div class="left">
+<span>
+<img src='./assets/images/Connection.png' alt="logo" width="240" height="75">
+</span>
 </div>
+
 <main>
     <body>
        <div class="top">
-        <form class="top">
+        <form>
             <label for="For">For:&nbsp;&nbsp; </label>
             <input type="text" id="for" style="width: 1100px;">            
         </form>
@@ -58,12 +61,11 @@
             <td>Description</td>
             <td>Long Description</td>
             <td>Unit</td>
-            <td>Cost to Sales</td>
+            <td>Cost to Sales</td>        
             <td>Suggested Cost</td>               
         </tr>
     </thead>
-
-<tr *ngFor="let i of items | itemSearch:searchCriteria">
+   <tr *ngFor="let i of items | itemSearch:searchCriteria">
     <td>{{ i.sku }}</td>
     <td>{{ i.category.description }}</td>
     <td>{{ i.shortDescription}} </td>

@@ -10,11 +10,25 @@ import { CategoryService } from '../category.service';
 export class CategoryListComponent implements OnInit {
 
   categories: Category[] = [];
-  searchCriteria: string = "";
+
+  
+  sortColumn: string ="shortDescription";
+  sortOrderAsc: boolean=true;
+   searchCriteria: string = "";
+
 
   constructor(
     private catsvc: CategoryService
     ) { }
+
+    sortFn(sortColumn: string): void {
+      if(this.sortColumn === sortColumn) {
+        this.sortOrderAsc = !this.sortOrderAsc;
+        return;
+      }
+      this.sortColumn = sortColumn;
+      this.sortOrderAsc = true;
+    }  
 
   ngOnInit(): void {
     this.catsvc.list().subscribe({
