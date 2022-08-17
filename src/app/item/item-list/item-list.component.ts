@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl } from '@angular/forms';
+import { FormArray, FormControl, } from '@angular/forms';
 import { ItemSearchPipe } from '../item-search.pipe';
 import { Item } from '../item.class';
 import { ItemService } from '../item.service';
@@ -23,9 +23,8 @@ export class ItemListComponent implements OnInit {
   sortOrderAsc: boolean=true;
    searchCriteria: string = "";
   form: any;
-
  
-
+ 
   constructor(
     private itesvc: ItemService
   ) { }
@@ -39,13 +38,22 @@ export class ItemListComponent implements OnInit {
     this.sortOrderAsc = true;
   }
 
+
+
   termsChange(selected: any): void {
-    console.log(
+       console.log(      
          selected.target.name,
          selected.target.value,
-         selected.target.checked
-    );
+         selected.target.checked,              
+    );      
   }
+
+
+  // fetchSelectedItems(){
+  //   this.fetchSelectedItemsList = this.checkboxes.DataList.filter((value: { isChecked: any; }, index: any) => {
+  //     return value.isChecked
+  //   });
+  // }
 
   // termsChange(e) {
   //   const checkArray: FormArray = this.form.get('checkArray') as FormArray;
