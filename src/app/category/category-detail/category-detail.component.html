@@ -4,14 +4,14 @@
 </div>
 <div>
 <main>
-    <table class="table table-striped table-sm" *ngIf="category">
+    <table class="table table-striped table-sm"  *ngIf="category">
         <tbody>
             <tr>
                 <td>Id: </td>
                 <td><input [(ngModel)]="category.id" type="number" readonly></td>
             </tr>
             <tr>
-                <td>Sku:</td>
+                <td>Description:</td>
                 <td><input [(ngModel)]="category.description" type="text" readonly ></td>
             </tr>
           

@@ -4,6 +4,7 @@ import { ItemSearchPipe } from '../item-search.pipe';
 import { Item } from '../item.class';
 import { ItemService } from '../item.service';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { toArray } from 'rxjs';
 
 
 @Component({
@@ -12,11 +13,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
   styleUrls: ['./item-list.component.css']
 })
 
+
+
 export class ItemListComponent implements OnInit {
   
-
-  // items: Item[] = [];
  
+  // items: Item[] = [];
+  
   items!: Item[];
 
   sortColumn: string ="shortDescription";
@@ -24,6 +27,7 @@ export class ItemListComponent implements OnInit {
    searchCriteria: string = "";
   form: any;
  
+
  
   constructor(
     private itesvc: ItemService
@@ -39,51 +43,20 @@ export class ItemListComponent implements OnInit {
   }
 
 
-
   termsChange(selected: any): void {
-       console.log(      
+         console.log(      
          selected.target.name,
          selected.target.value,
          selected.target.checked,              
     );      
   }
-
-
-  // fetchSelectedItems(){
-  //   this.fetchSelectedItemsList = this.checkboxes.DataList.filter((value: { isChecked: any; }, index: any) => {
-  //     return value.isChecked
-  //   });
-  // }
-
-  // termsChange(e) {
-  //   const checkArray: FormArray = this.form.get('checkArray') as FormArray;
-
-  //   if (e.target.checked) {
-  //     checkArray.push(new FormControl(e.target.value));
-  //   }
-  //   else {
-  //     let i:number = 0;
-  //     checkArray.controls.forEach((item: FormControl) => {
-  //       if (item.value == e.target.value)) {
-  //         checkArray.removeAt(i);
-  //         return;        }
-  //       }
-  //       i++;
-  //     });
-  //   }
-  // }
-  // subimitForm() {
-  //   console.log(this.form.value)
-  // }  
-       
-  //   console.log(
-  //        selected.target.name,
-  //        selected.target.value,
-  //        selected.target.checked
-  //   );
-  // }
   
-
+ 
+  get selectedCheckboxList(){
+    return this.items.filter(item => item.checked);
+  
+    
+  }
 
   ngOnInit(): void {
     this.itesvc.list().subscribe({
@@ -93,8 +66,5 @@ export class ItemListComponent implements OnInit {
       },
       error: (err) => console.error(err)
     });
-
-
   }
-
 }

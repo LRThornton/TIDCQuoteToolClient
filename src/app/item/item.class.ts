@@ -14,4 +14,5 @@ export class Item {
     categoryDescription: string = "";
     categoryId: number = 0;
     category!: Category;    
+    checked: unknown;
 }

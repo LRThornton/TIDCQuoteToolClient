@@ -1,0 +1,12 @@
+div#home {
+    text-align:center;
+}
+div#home div {
+    display: inline-block;
+    width: 50%;
+    margin: 20px auto;
+       
+}
+div#button {
+    border: 0;
+} 

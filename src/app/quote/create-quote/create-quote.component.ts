@@ -15,15 +15,18 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class CreateQuoteComponent implements OnInit {
 
-  path: string = './src/assets/images/connection.png';
+    path: string = './src/assets/images/connection.png';
   alttext: string="connection logo"
 
   searchCriteria: string = "";
   items!: Item[];
   item: Item = new Item();
+  
 
   sortColumn: string ="shortDescription";
   sortOrderAsc: boolean=true;
+
+  selectionArrayProperty: string[] = [];
 
 
   constructor(
@@ -36,7 +39,7 @@ export class CreateQuoteComponent implements OnInit {
       return;
     }
     this.sortColumn = sortColumn;
-    this.sortOrderAsc = true;
+    this.sortOrderAsc = true;  
   }
 
   ngOnInit(): void {
