@@ -20,14 +20,12 @@ export class ItemListComponent implements OnInit {
  
   // items: Item[] = [];
   
-  items!: Item[];
+  items: Item[] = [];
 
   sortColumn: string ="shortDescription";
   sortOrderAsc: boolean=true;
-   searchCriteria: string = "";
-  form: any;
- 
-
+  searchCriteria: string = "";
+  
  
   constructor(
     private itesvc: ItemService
@@ -45,19 +43,15 @@ export class ItemListComponent implements OnInit {
 
   termsChange(selected: any): void {
          console.log(      
+          this.items.values,
          selected.target.name,
          selected.target.value,
          selected.target.checked,              
-    );      
+    );   
+      
   }
   
  
-  get selectedCheckboxList(){
-    return this.items.filter(item => item.checked);
-  
-    
-  }
-
   ngOnInit(): void {
     this.itesvc.list().subscribe({
       next: (res) => {

@@ -6,7 +6,9 @@
 .top {
     float:left;
     font-weight: bold;
+
 }
+
 
 thead {
     color: blue;
@@ -42,4 +44,11 @@ th, td {
   input {
     border-style: hidden;
     border-radius: 7px;
+}
+
+input {
+    display:inline-block
+}
+ hr {     
+    width: 100%
 }

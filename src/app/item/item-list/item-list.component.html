@@ -1,3 +1,4 @@
+<h1><img src='./assets/images/Connection.png' alt="connection logo" width="365" height="65"></h1>
 <app-menu></app-menu>
 <br>
 <div>
@@ -6,7 +7,7 @@
     <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
 </div>
 
-<table class="table table-striped table-sm" class="table table-hover" >
+<table class="table table-striped table-sm" class="table table-hover" name ="table1" >
     <thead>
         <tr>
             <td></td>
@@ -24,7 +25,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let i of items | itemSearch:searchCriteria">
-            <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" value ={{i.id}}{{i.shortDescription}}></td>   
+            <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" (change)="termsChange($event)"></td>   
            <!-- <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" (change)="termsChange($event)" value ={{i.id}}{{i.shortDescription}}></td>  -->
            <!--<td><input type="checkbox" id ="checked" value="checked"></td>--> 
               <!--<td>{{ i.id }}</td>-->
@@ -42,7 +43,7 @@
             </td>
         </tr>
         <br>
-        <pre>{{this.selectedCheckboxList}}</pre>
+       
         <!-- <button class="btn btn-primary" input type="submit" id="checked"  a routerLink="/quote/create/">Create Quote</button> -->
        
     </tbody>
