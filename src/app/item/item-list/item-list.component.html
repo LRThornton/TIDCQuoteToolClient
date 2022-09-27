@@ -9,9 +9,8 @@
 
 <table class="table table-striped table-sm" class="table table-hover" name ="table1" >
     <thead>
-        <tr>
-            <td></td>
-           <!-- <td>Id</td>-->
+        <tr>            
+            <td>Id</td>
             <td>Product</td>
             <td>SKU</td>
             <td>Part Number</td>
@@ -24,11 +23,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let i of items | itemSearch:searchCriteria">
-            <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" (change)="termsChange($event)"></td>   
-           <!-- <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" (change)="termsChange($event)" value ={{i.id}}{{i.shortDescription}}></td>  -->
-           <!--<td><input type="checkbox" id ="checked" value="checked"></td>--> 
-              <!--<td>{{ i.id }}</td>-->
+        <tr *ngFor="let i of items | itemSearch:searchCriteria">           
+            <td>{{ i.id }}</td>
             <td>{{ i.category.description }}</td>
             <td>{{ i.sku }}</td>
             <td>{{ i.partNumber }}</td>
@@ -42,10 +38,7 @@
                 <a routerLink="/item/edit/{{ i.id }}" class="clickable">Edit</a>            
             </td>
         </tr>
-        <br>
-       
-        <!-- <button class="btn btn-primary" input type="submit" id="checked"  a routerLink="/quote/create/">Create Quote</button> -->
-       
+        <br>      
     </tbody>
 </table>
 

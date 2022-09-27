@@ -1,6 +1,9 @@
 <!--<app-menu></app-menu>-->
-<div class="right">
-    <p>Quote <br>
+<hr class="topborder" style="color:blue">
+<main>
+    <body>
+     <div class="right">
+    <p><b>QUOTE</b><br>
         <label for="Submitted">Submitted on:&nbsp;</label>
         <input type="date" id="Submitted" style="width: 200px;"><br>
     </p>
@@ -8,37 +11,83 @@
     </p>
 </div>
 <div class="left">
-<span>
-<img src='./assets/images/Connection.png' alt="connection logo" width="365" height="65">
-</span>
+    <span>
+    <img src='./assets/images/Connection.png' alt="connection logo" width="365" height="65">
+    </span>
+</div>
+    
+       <div class="top">         
+            <label for="For" >For:&nbsp;&nbsp; </label>
+            <input type="text" id="for" style="width: 800px;">            
+             <br>  
+            <label for="account manager">Account Manager: &nbsp;&nbsp;</label>
+            <input type="text" id="account manager" style="width: 800px;">       
+             <br>         
+            <label for="wid">WID:&nbsp;&nbsp;</label>
+            <input type="text" id="wid" style="width: 800px;">
+            <br>
+            <br>
+            <p style="color:red">INTERNAL USE ONLY</p>  
+            <br>                   
+        </div>    
+        <hr style="width:100%; text-align:center; margin-left:0">     
+       
+       <div class="Left" *ngIf="showSelect">
+            <select multiple [(ngModel)]="selections">
+                <option *ngFor="let i of items" value="{{i.id}}">{{i.shortDescription}}</option>
+            </select>
+                <button (click)="display()">Select</button>   
+        </div>
+       
+        <p></p>
+            <table class="table table-striped table-sm" class="table table-hover">
+               <thead>
+                <tr>
+                    <td>SKU</td> 
+                    <td>Product</td>                                     
+                    <td>Short Description</td>
+                    <td>Description</td>
+                    <td>Unit</td>  
+                    <td>Cost to Sales</td>
+                    <td>Suggested Cost</td>                            
+                </tr>
+            </thead>
+              <tbody>
+                <tr *ngFor="let ql of quotelines">
+                  <td>{{ ql.sku }}</td>   
+                  <td>{{ ql.category.description }}</td>                             
+                  <td>{{ ql.shortDescription }}</td>
+                  <td>{{ ql.longDescription }}</td>
+                  <td>{{ ql.unit}}</td>
+                  <td>{{ ql.cost | currency }}</td>
+                  <td>{{ ql.sell | currency }}</td>                   
+                </tr> 
+              </tbody>
+            </table>    
+        
+ 
+<div style="float: left;">
+    <label for="services">Services: &nbsp; &nbsp;</label>
+    <input type="text" id="services" style="width: 1400px;">
+<br>    
+<p>Thank you for your business.</p>
+<p>Submitted by: Vincent Veak<br>
+<label for="approved">Approved by: &nbsp; &nbsp;</label>
+    <input type="text" id="approved" style="width: 1100px;">
+</p>
+<div class="notes">
+    <div>Next steps: Contact your CX/project coordinator to begin next steps. 
+ For all depot and lifecycle service requests, please create a WebSPOC ticket</div>
+</div>
 </div>
 
-<main>
-    <body>
-       <div class="top">
-        <form>
-            <label for="For" >For:&nbsp;&nbsp; </label>
-            <input type="text" id="for" style="width: 1100px;">            
-        </form>
-        
-        <form>
-            <label for="account manager">Account Manager: &nbsp;&nbsp;</label>
-            <input type="text" id="account manager" style="width: 1000px;">
-        </form>
-        
-        <form>
-            <label for="wid">WID:&nbsp;&nbsp;</label>
-            <input type="text" id="wid" style="width: 1100px;">
-            <br>
-            <br>
-            <div class="notes">
-                INTERNAL USE ONLY
-            </div>
-            <hr>
-        </form>    
-       </div>
-      
-        
+</body>
+</main>
+<br>
+<br>
+<footer></footer>
+
+ <!-- my old attempt       
 <table class="table table-striped table-sm" class="table table-hover" id ="selectedItems" >
     <thead>
         <tr>
@@ -54,11 +103,11 @@
         </tr>
     </thead>
     <tbody>
+        
         <tr *ngFor="let i of items | itemSearch:searchCriteria">
             <td><input type="checkbox" [checked]="i.select" (change)="termsChange($event)"  name ={{i.id}}{{i.shortDescription}}></td>   
-           <!-- <td><input type="checkbox" id="checked"  [(ngModel)]="i.checked" (change)="termsChange($event)" value ={{i.id}}{{i.shortDescription}}></td>  -->
-           <!--<td><input type="checkbox" id ="checked" value="checked"></td>--> 
-              <!--<td>{{ i.id }}</td>-->
+           
+              <td>{{ i.id }}</td>
             <td>{{ i.category.description }}</td>
             <td>{{ i.sku }}</td>
             <td>{{ i.partNumber }}</td>
@@ -69,30 +118,7 @@
             <td>{{ i.unit}}</td>          
         </tr>
         <br>
-        <button class="btn btn-primary" input type="submit" id="checked">Create Quote</button>
-         <!-- <button class="btn btn-primary" input type="submit" id="checked"  a routerLink="/quote/create/">Create Quote</button> -->
-       
+        <button class="btn btn-primary" input type="submit" id="checked">Create Quote</button>       
     </tbody>
-</table>
-
-<form>
-    <label for="services">Services: &nbsp; &nbsp;</label>
-    <input type="text" id="services" style="width: 1100px;">
-</form>
-<br>
-<p>Thank you for your business.</p>
-<p>Submitted by: Vincent Veak</p>
-<label for="approved">Approved by: &nbsp; &nbsp;</label>
-    <input type="text" id="approved" style="width: 1100px;">
-
-<div class="notes">
-    <div>Next steps: Contact your CX/project coordinator to begin next steps. 
- For all depot and lifecycle service requests, please create a WebSPOC ticket</div>
-</div>
-
-</body>
-</main>
-<br>
-<br>
-<footer></footer>
+</table> -->
 

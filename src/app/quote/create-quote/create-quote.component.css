@@ -1,7 +1,11 @@
 .body {
-    margin: 25px;
+    margin: 20px;
 } 
 
+hr.topborder {
+    border: 5px solid;
+    color: rgb(0, 0, 255);
+}
 
 .top {
     float:left;
@@ -9,6 +13,13 @@
 
 }
 
+.Left {
+    text-align: left;
+}
+
+.dropdown{
+    float: left;
+}
 
 thead {
     color: blue;
@@ -35,20 +46,24 @@ div #top {
 .headings{
     color: blue;
 }
+
 th, td {
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+
   input {
     border-style: hidden;
     border-radius: 7px;
-}
-
-input {
     display:inline-block
 }
+
  hr {     
     width: 100%
+}
+
+label {
+    display: inline-block
 }
