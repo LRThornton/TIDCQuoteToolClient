@@ -3,8 +3,13 @@
 } 
 
 hr.topborder {
-    border: 5px solid;
-    color: rgb(0, 0, 255);
+    border-color: none;   
+    /* background-color: #3c70b9; */
+    /* background-color:  #1e4a92; */
+    /* background-color:  #2fbad3; */
+    background-color:  (0, 47, 186);
+    height: 10px;
+
 }
 
 .top {
@@ -59,6 +64,15 @@ th, td {
     border-radius: 7px;
     display:inline-block
 }
+   
+   textarea {
+    resize:none;
+    border-style: hidden;
+    border-radius: 7px;
+    display:inline-block;
+    vertical-align: top;
+   }
+
 
  hr {     
     width: 100%

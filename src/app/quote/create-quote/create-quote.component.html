@@ -1,8 +1,11 @@
 <!--<app-menu></app-menu>-->
-<hr class="topborder" style="color:blue">
+<!-- <hr class="topborder"> -->
 <main>
-    <body>
-     <div class="right">
+    <hr class="topborder"  style= "background-color: blue;
+    height: 15px;">
+    <body>        
+     <div class="right">        
+        <br>
     <p><b>QUOTE</b><br>
         <label for="Submitted">Submitted on:&nbsp;</label>
         <input type="date" id="Submitted" style="width: 200px;"><br>
@@ -32,8 +35,8 @@
         </div>    
         <hr style="width:100%; text-align:center; margin-left:0">     
        
-       <div class="Left" *ngIf="showSelect">
-            <select multiple [(ngModel)]="selections">
+       <div class="Left" *ngIf="showSelect"> 
+            <select multiple [(ngModel)]="selections">  
                 <option *ngFor="let i of items" value="{{i.id}}">{{i.shortDescription}}</option>
             </select>
                 <button (click)="display()">Select</button>   
@@ -44,8 +47,8 @@
                <thead>
                 <tr>
                     <td>SKU</td> 
-                    <td>Product</td>                                     
-                    <td>Short Description</td>
+                    <td>Service Name</td>                                     
+                    <td>Detail</td>
                     <td>Description</td>
                     <td>Unit</td>  
                     <td>Cost to Sales</td>
@@ -66,20 +69,21 @@
             </table>    
         
  
-<div style="float: left;">
+<div>
     <label for="services">Services: &nbsp; &nbsp;</label>
-    <input type="text" id="services" style="width: 1400px;">
+    <textarea id="services"  rows="2" cols="126" ></textarea>
+</div>
 <br>    
 <p>Thank you for your business.</p>
 <p>Submitted by: Vincent Veak<br>
 <label for="approved">Approved by: &nbsp; &nbsp;</label>
-    <input type="text" id="approved" style="width: 1100px;">
+    <input type="text" id="approved" style="width: 800px">
 </p>
 <div class="notes">
     <div>Next steps: Contact your CX/project coordinator to begin next steps. 
  For all depot and lifecycle service requests, please create a WebSPOC ticket</div>
 </div>
-</div>
+
 
 </body>
 </main>

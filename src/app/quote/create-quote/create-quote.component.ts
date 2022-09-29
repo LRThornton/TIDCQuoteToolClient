@@ -33,10 +33,7 @@ export class CreateQuoteComponent implements OnInit {
   showSelect: boolean = true;
 
   constructor(
-    private itesvc: ItemService, 
-    private router: Router,
-   private route: ActivatedRoute   
- ) { }
+    private itesvc: ItemService ) { }
 
   GetItemByPk (id: number) {
     for (let i of this.items) {
