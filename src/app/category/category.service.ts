@@ -9,8 +9,8 @@ import { Category } from './category.class';
 })
 export class CategoryService {
 
-  //baseUrl: string = "http://172.20.131.5:8080/api/catgories";
-    baseUrl: string = "http://localhost:44393/api/categories";
+  baseUrl: string = "http://172.20.131.5:81/api/categories";
+  //  baseUrl: string = "http://localhost:44393/api/categories";
 
   constructor(
     private http: HttpClient
