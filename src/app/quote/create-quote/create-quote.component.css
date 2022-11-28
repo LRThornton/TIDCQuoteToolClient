@@ -2,13 +2,23 @@
     margin: 20px;
 } 
 
+.blueline {
+    border-top: 5px;
+    color: #0076bb;
+    background-color: #0076bb !important;
+    height: 10px   
+
+}
+
 hr.topborder {
-    border-color: none;   
-    /* background-color: #3c70b9; */
+    border-color: #3c70b9;   
+    color: #3c70b9;
+    background-color: #3c70b9; 
+    border-top: 5px;
     /* background-color:  #1e4a92; */
-    /* background-color:  #2fbad3; */
-    background-color:  (0, 47, 186);
-    height: 10px;
+   
+    /* background-color:  (0, 47, 186); */
+    height: 15px;
 
 }
 
@@ -18,8 +28,8 @@ hr.topborder {
 
 }
 
-.Left {
-    text-align: left;
+.Left2 {
+    text-align: center;
 }
 
 .dropdown{
@@ -44,6 +54,11 @@ thead {
     color: red;
 
 }
+
+div #accountmanager {
+    display: inline-block;
+}
+
 div #top { 
     font-size: medium;
 

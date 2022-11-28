@@ -8,8 +8,8 @@ import { Item } from './item.class';
 })
 export class ItemService {
 
-  baseUrl: string = "http://172.20.131.5:81/api/items";
-  // baseUrl: string = "http://localhost:44393/api/items";
+  //baseUrl: string = "http://172.20.131.5:90/QuoteTool/api/items";
+   baseUrl: string = "http://localhost:5000/api/items";
 
   constructor(
     private http: HttpClient

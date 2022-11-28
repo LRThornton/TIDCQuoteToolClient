@@ -1,9 +1,12 @@
 <!--<app-menu></app-menu>-->
 <!-- <hr class="topborder"> -->
 <main>
-    <hr class="topborder"  style= "background-color: blue;
-    height: 15px;">
-    <body>        
+    <div class="blueline"></div>   
+    <!-- <hr noshade class="topborder"  style= "background-color: blue; color: blue;
+    height: 15px;"/>    -->
+   
+  
+    <body>             
      <div class="right">        
         <br>
     <p><b>QUOTE</b><br>
@@ -12,7 +15,7 @@
     </p>
     <p style="color: red">Quote is valid for 90 days
     </p>
-</div>
+</div>`
 <div class="left">
     <span>
     <img src='./assets/images/Connection.png' alt="connection logo" width="365" height="65">
@@ -35,7 +38,7 @@
         </div>    
         <hr style="width:100%; text-align:center; margin-left:0">     
        
-       <div class="Left" *ngIf="showSelect"> 
+       <div class="Left2" *ngIf="showSelect"> 
             <select multiple [(ngModel)]="selections">  
                 <option *ngFor="let i of items" value="{{i.id}}">{{i.shortDescription}}</option>
             </select>

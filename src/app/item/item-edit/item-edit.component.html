@@ -41,7 +41,12 @@
             </tr>
             <tr>
                 <td>Category:</td>
-                <td><input [(ngModel)]="item.categoryId" type="text" readonly></td>
+                  <td><select input [(ngModel)]="item.categoryId"> 
+                     <option *ngFor="let c of categories" value="{{ c.id }}">{{ c.description }}</option>
+                </select>
+                 </td>  
+                
+                <!-- <td><input [(ngModel)]="item.categoryId.description" type="text"></td>   -->
             </tr>
         </tbody>
     </table>
