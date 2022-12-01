@@ -37,7 +37,8 @@ hr.topborder {
 }
 
 thead {
-    color: blue;
+    color: #3c70b9
+    /* color: blue; */
 
 }
 .left {
@@ -63,9 +64,9 @@ div #top {
     font-size: medium;
 
 }
-.headings{
+/* .headings{
     color: blue;
-}
+} */
 
 th, td {
     padding-top: 5px;

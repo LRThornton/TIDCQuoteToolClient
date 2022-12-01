@@ -1,9 +1,9 @@
-div#home {
+.home {
     text-align:center;
 }
 div#home div {
     display: inline-block;
-    width: 50%;
+    width: 75%;
     margin: 20px auto;
        
 }
