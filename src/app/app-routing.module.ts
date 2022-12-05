@@ -10,6 +10,11 @@ import { ItemDetailComponent } from './item/item-detail/item-detail.component';
 import { ItemEditComponent } from './item/item-edit/item-edit.component';
 import { ItemListComponent } from './item/item-list/item-list.component';
 import { CreateQuoteComponent } from './quote/create-quote/create-quote.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 
 
@@ -28,7 +33,13 @@ const routes: Routes = [
     { path: "item/detail/:id", component: ItemDetailComponent},
     { path: "item/edit/:id", component: ItemEditComponent},
 
-    { path: "quote/create", component: CreateQuoteComponent}
+    { path: "quote/create", component: CreateQuoteComponent},
+
+    { path: "user/list", component: UserListComponent},
+    { path: "user/create", component: UserCreateComponent},
+    { path: "user/detail/:id", component: UserDetailComponent},
+    { path: "user/edit/:id", component: UserEditComponent},
+    { path: "login", component: UserLoginComponent}
     
 
     

@@ -17,6 +17,11 @@ import { HomeComponent } from './core/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ItemSearchPipe } from './item/item-search.pipe';
 import { CreateQuoteComponent } from './quote/create-quote/create-quote.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserListComponent } from './user/user-list/user-list.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 
 @NgModule({
@@ -33,7 +38,12 @@ import { CreateQuoteComponent } from './quote/create-quote/create-quote.componen
     MenuComponent,
     HomeComponent,
     ItemSearchPipe,
-    CreateQuoteComponent
+    CreateQuoteComponent,
+    UserCreateComponent,
+    UserDetailComponent,
+    UserEditComponent,
+    UserListComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,
