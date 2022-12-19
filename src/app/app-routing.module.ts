@@ -35,7 +35,7 @@ const routes: Routes = [
 
     { path: "quote/create", component: CreateQuoteComponent},
 
-    { path: "user/list", component: UserListComponent},
+    { path: "users/list", component: UserListComponent},
     { path: "user/create", component: UserCreateComponent},
     { path: "user/detail/:id", component: UserDetailComponent},
     { path: "user/edit/:id", component: UserEditComponent},

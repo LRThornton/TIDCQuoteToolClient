@@ -22,8 +22,8 @@ export class UserLoginComponent implements OnInit {
     return this.sys.getLoggedInUser()?.isAdmin;
   }
 
-  usr: string = "vv";
-  pwd: string = "vv";
+  usr: string = "";
+  pwd: string = "";
   msg: string = "";
 
   constructor(
