@@ -1,11 +1,14 @@
-<div id="login">
+<h1><img src='./assets/images/Connection.png' alt="connection logo" width="365" height="65"></h1>  
+<div id="login">    
     <div>
         <form>
             <table class="table table-sm table-borderless">
                 <tbody>
                     <tr>
-                        <td colspan="fs-2 fw-bold">{{ pageTitle }}</td>
+                        <td colspan="fs-4 fw-bold">{{ pageTitle }}</td>
                     </tr>
+                    <br>
+                    <br>
                     <tr>
                         <td>User name:</td>
                         <td><input [(ngModel)]="usr" name="username" type="text"></td>
@@ -17,7 +20,7 @@
                 </tbody>
             </table>
             <p>
-                <button (click)="login()" class="btn btn-primary">Login</button>
+                <button (click)="login()" class="btn btn-outline-secondary btn-md shadow p-4 mb-5 rounded">Login</button>
             </p>
             <p>
                 <span class="fw-bold text-danger">{{ msg }}&nbsp;</span>

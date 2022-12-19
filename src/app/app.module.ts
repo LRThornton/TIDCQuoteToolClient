@@ -23,6 +23,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { UserLoginComponent } from './user/user-login/user-login.component';
 import { CategorySearchPipe } from './category/category-search.pipe';
+import { BoolDisplayPipe } from './bool-display.pipe';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CategorySearchPipe } from './category/category-search.pipe';
     UserEditComponent,
     UserListComponent,
     UserLoginComponent,
-    CategorySearchPipe
+    CategorySearchPipe,
+    BoolDisplayPipe
   ],
   imports: [
     BrowserModule,
