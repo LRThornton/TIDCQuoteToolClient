@@ -17,8 +17,6 @@ import { toArray } from 'rxjs';
 
 export class ItemListComponent implements OnInit {
   
- 
-  // items: Item[] = [];
   
   items: Item[] = [];
 

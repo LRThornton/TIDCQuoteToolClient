@@ -3,8 +3,8 @@
 <div>
     <br>
     <span id="pageTitle">TIDC Pricing Categories</span>  |
-    <a routerLink="/category/create">New Category</a> 
-    <!-- <input [(ngModel)]="searchCriteria" type="text" placeholder="Search"> -->
+    <a routerLink="/category/create">New Category</a> |
+    <input [(ngModel)]="searchCriteria" type="text" placeholder="Search">
     <br>
     <hr>
 </div>
@@ -18,7 +18,7 @@
     </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let c of categories">
+        <tr *ngFor="let c of categories | categorySearch:searchCriteria">
             <td>{{ c.id }}</td>
             <td>{{ c.description }}</td>
               <td>
