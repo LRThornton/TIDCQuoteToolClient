@@ -13,6 +13,7 @@ import { UserService } from '../user.service';
 })
 export class UserLoginComponent implements OnInit {
 
+  pageTitle: string = "QuoteTool Login";
   showVerifyButton: boolean = false;
   get isAdmin() {
     if(!this.sys.isLoggedIn) {
